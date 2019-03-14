@@ -7,6 +7,7 @@ const routes = [
       { name: 'home', path: '', component: () => import('components/Home') },
       { name: 'addword', path: 'addword', component: () => import('components/Addword') },
       { name: 'allwords', path: 'allwords', component: () => import('components/Allwords') },
+      { name: 'editword', path: 'word/:id', component: () => import('components/Editword') },
       { name: 'settings', path: 'settings', component: () => import('components/Settings') }
     ]
   }

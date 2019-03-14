@@ -1,8 +1,8 @@
 <template>
   <div class="q-px-lg">
     <h5 class="text-center">All words</h5>
-    <q-item v-for="word in words" :key="word.id" :to="'/word/' + word.id">
-      {{word.word}}
+    <q-item v-for="word in words" :key="word.id" :to="'/word/' + word.id" class="style:v-align='center'">
+      {{word.word}} <q-badge class="q-ml-md" color="primary" v-for="tag in word.tags" :key="tag.id">{{tag.name}}</q-badge>
     </q-item>
     <q-pagination v-model="current" :max="10" :directionLinks="true"></q-pagination>
   </div>
