@@ -17,7 +17,7 @@ export default {
     return {
       word: '',
       tags: [],
-      dontgo: true,
+      dontgo: false,
       level: 1,
       hint: '',
       similarwords: [],
@@ -60,6 +60,8 @@ export default {
     },
     addCategory (val) {
       this.tagOptions.push(val)
+      this.tags.push(val)
+      this.dontgo = false
     }
   }
 }
